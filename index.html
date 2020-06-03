@@ -13,26 +13,50 @@
       background-repeat: repeat-x;
       background-position: left bottom;
       font-family: "Arial Black";
-      height: 100vh;
+      min-height: 100vh;
     }
     #header {
       height: auto;
       overflow: auto;
     }
-    img {
+    #penguin {
       border: none;
-      width: 8%;
+      height: 90px;
+      width: 90px;
       margin: 5px;
       float: left;
     }
     h1 {
       font-family: 'Android-y';
-      font-size: 8vw;
+      font-size: 90px;
       margin: 0;
-      vertical-align: middle;
+      color: Black;
     }
-    li {
-      font-size: 2vw;
+    #flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #flex div {
+      margin: 10px;
+      width: 400px;
+      height: 280px;
+      /* background-color: grey; */
+    }
+    .img-container img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+    .img-container img:hover {
+      box-shadow: 3px 3px 8px #2D5579;
+      outline-style: solid;
+      outline-color: black;
+      outline-width: 2px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 30px;
+      text-align: center;
     }
     @font-face {
       font-family: 'Android-y';
@@ -43,18 +67,36 @@
       font-weight: normal;
       font-style: normal;
     }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 80px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div id='header'>
-      <img src='penguin_logo.png' alt='penguin'><h1>Android Penguin</h1>
+      <img id="penguin" src='penguin_logo.png' alt='penguin'><h1>Android Penguin</h1>
   </div>
   <hr>
-  <div>
+  <div id="flex">
+    <div class="img-container">
+      <a href="https://android-penguin.github.io/lockdown-videos" target="_blank">
+        <img src="lockdown_videos_thumbnail.png" alt="Lockdown Videos"></a>
+      <p>SCB Lockdown Videos</p>
+    </div>
+    <div class="img-container">
+      <a href="https://android-penguin.github.io/makrall" target="_blank">
+        <img src="makrall_thumbnail.png" alt="Makrall Website"></a>
+      <p>Makrall Website</p>
+    </div>
+    <div>
+    </div>
+  <!-- </div>
     <ul>
         <li>SCB Lockdown Videos has moved to a new address - <a href="https://android-penguin.github.io/lockdown-videos" target="_blank">Click here</a></li>
         <li>Makrall website (WIP) - <a href="https://android-penguin.github.io/makrall" target="_blank">Click here</a></li>
     </ul>
-  </div>
+  </div> -->
 </body>
